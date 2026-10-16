@@ -16,7 +16,11 @@ function tile(r) {
 	return { light: side('light'), dark: side('dark'), face: fonts[font] || fonts.serif };
 }
 const out = [];
-for (const slug of fs.readdirSync(path.join(root, 'styles')).sort()) {
+/* THE ORDER: the slugs in order.txt first (the five starters as the panel shows them), then the rest newest folder first. */
+const named = fs.existsSync(path.join(root, 'order.txt')) ? fs.readFileSync(path.join(root, 'order.txt'), 'utf8').split(/\s+/).filter(Boolean) : [];
+const all = fs.readdirSync(path.join(root, 'styles')).filter(d => fs.existsSync(path.join(root, 'styles', d, 'style.json')));
+const rest = all.filter(d => !named.includes(d)).sort((a, b) => fs.statSync(path.join(root, 'styles', b)).birthtimeMs - fs.statSync(path.join(root, 'styles', a)).birthtimeMs);
+for (const slug of named.filter(d => all.includes(d)).concat(rest)) {
 	const dir = path.join(root, 'styles', slug);
 	if (!fs.existsSync(path.join(dir, 'style.json'))) continue;
 	const r = JSON.parse(fs.readFileSync(path.join(dir, 'style.json'), 'utf8'));

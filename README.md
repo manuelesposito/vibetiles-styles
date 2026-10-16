@@ -19,7 +19,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). In short: export your style with **Copy 
 - `styles/<slug>/style.json`: the record, as the panel's Copy as JSON writes it, without an `id`.
 - `styles/<slug>/README.md`: one paragraph on the style and a line saying who made it.
 - `styles/<slug>/preview.png`: optional, a picture of the style on a page.
-- `index.json`: every style in one file, written by `node tools/build-index.mjs`.
+- `index.json`: every style in one file, written by `node tools/build-index.mjs`; `order.txt` names the slugs that come first.
 - `schema/`: what a record may contain, copied from the plugin.
 - `tools/check-style.mjs`: the check the pull requests run.
 

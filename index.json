@@ -4,7 +4,7 @@
 		{
 			"slug": "book",
 			"label": "Book",
-			"note": "Sepia paper and a serif reading face, paragraphs indented and justified, as a printed book sets them.",
+			"note": "Sepia paper, a serif face, indented paragraphs.",
 			"by": "Elmastudio",
 			"needs": "0.57",
 			"preset": "folio",
@@ -25,55 +25,9 @@
 			"preview": null
 		},
 		{
-			"slug": "clear",
-			"label": "Clear",
-			"note": "Titanium white, accent kept to the ink, the most neutral of the five.",
-			"by": "Elmastudio",
-			"needs": "0.57",
-			"preset": "clear",
-			"tile": {
-				"light": {
-					"paper": "#ffffff",
-					"ink": "#000000",
-					"accent": "#000000"
-				},
-				"dark": {
-					"paper": "#000000",
-					"ink": "#ffffff",
-					"accent": "#ffffff"
-				},
-				"face": "\"Atkinson Hyperlegible Next\", sans-serif"
-			},
-			"file": "styles/clear/style.json",
-			"preview": null
-		},
-		{
-			"slug": "essay",
-			"label": "Essay",
-			"note": "Ivory paper and plain text, the look of a typed essay.",
-			"by": "Elmastudio",
-			"needs": "0.57",
-			"preset": "essay",
-			"tile": {
-				"light": {
-					"paper": "#faf5e9",
-					"ink": "#26231f",
-					"accent": "#8b1e1e"
-				},
-				"dark": {
-					"paper": "#1a1917",
-					"ink": "#d9d4ca",
-					"accent": "#e08a7c"
-				},
-				"face": "\"Spectral\", Georgia, serif"
-			},
-			"file": "styles/essay/style.json",
-			"preview": null
-		},
-		{
 			"slug": "soft",
 			"label": "Soft",
-			"note": "Dove-grey paper with gentle contrast and filled cards, quiet for long reading.",
+			"note": "Dove-grey paper, gentle contrast, filled cards.",
 			"by": "Elmastudio",
 			"needs": "0.57",
 			"preset": "soft",
@@ -96,7 +50,7 @@
 		{
 			"slug": "still",
 			"label": "Still",
-			"note": "Slate colours, a cool and even page with little decoration.",
+			"note": "Slate colours, cool and even, little decoration.",
 			"by": "Elmastudio",
 			"needs": "0.57",
 			"preset": "still",
@@ -114,6 +68,52 @@
 				"face": "\"Inter Variable\", Inter, ui-sans-serif, system-ui, sans-serif"
 			},
 			"file": "styles/still/style.json",
+			"preview": null
+		},
+		{
+			"slug": "essay",
+			"label": "Essay",
+			"note": "Ivory paper and plain text, like a typed essay.",
+			"by": "Elmastudio",
+			"needs": "0.57",
+			"preset": "essay",
+			"tile": {
+				"light": {
+					"paper": "#faf5e9",
+					"ink": "#26231f",
+					"accent": "#8b1e1e"
+				},
+				"dark": {
+					"paper": "#1a1917",
+					"ink": "#d9d4ca",
+					"accent": "#e08a7c"
+				},
+				"face": "\"Spectral\", Georgia, serif"
+			},
+			"file": "styles/essay/style.json",
+			"preview": null
+		},
+		{
+			"slug": "clear",
+			"label": "Clear",
+			"note": "Titanium white, the accent kept to the ink.",
+			"by": "Elmastudio",
+			"needs": "0.57",
+			"preset": "clear",
+			"tile": {
+				"light": {
+					"paper": "#ffffff",
+					"ink": "#000000",
+					"accent": "#000000"
+				},
+				"dark": {
+					"paper": "#000000",
+					"ink": "#ffffff",
+					"accent": "#ffffff"
+				},
+				"face": "\"Atkinson Hyperlegible Next\", sans-serif"
+			},
+			"file": "styles/clear/style.json",
 			"preview": null
 		}
 	]
