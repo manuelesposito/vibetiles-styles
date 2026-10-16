@@ -1,0 +1,68 @@
+{
+	"updated": "2026-10-16",
+	"styles": [
+		{
+			"slug": "book",
+			"label": "Book",
+			"note": "Sepia paper and a serif reading face, paragraphs indented and justified, as a printed book sets them.",
+			"by": "Elmastudio",
+			"needs": "0.57",
+			"preset": "folio",
+			"colours": {
+				"light": {
+					"accent": "#4f321c",
+					"highlight": "#ffc46e"
+				},
+				"dark": {
+					"highlight": "#ffc46e"
+				}
+			},
+			"file": "styles/book/style.json",
+			"preview": null
+		},
+		{
+			"slug": "clear",
+			"label": "Clear",
+			"note": "Titanium white, accent kept to the ink, the most neutral of the five.",
+			"by": "Elmastudio",
+			"needs": "0.57",
+			"preset": "clear",
+			"colours": {},
+			"file": "styles/clear/style.json",
+			"preview": null
+		},
+		{
+			"slug": "essay",
+			"label": "Essay",
+			"note": "Ivory paper and plain text, the look of a typed essay.",
+			"by": "Elmastudio",
+			"needs": "0.57",
+			"preset": "essay",
+			"colours": {},
+			"file": "styles/essay/style.json",
+			"preview": null
+		},
+		{
+			"slug": "soft",
+			"label": "Soft",
+			"note": "Dove-grey paper with gentle contrast and filled cards, quiet for long reading.",
+			"by": "Elmastudio",
+			"needs": "0.57",
+			"preset": "soft",
+			"colours": {},
+			"file": "styles/soft/style.json",
+			"preview": null
+		},
+		{
+			"slug": "still",
+			"label": "Still",
+			"note": "Slate colours, a cool and even page with little decoration.",
+			"by": "Elmastudio",
+			"needs": "0.57",
+			"preset": "still",
+			"colours": {},
+			"file": "styles/still/style.json",
+			"preview": null
+		}
+	]
+}

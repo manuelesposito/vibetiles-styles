@@ -1,0 +1,589 @@
+{
+  "meaning": {
+    "architrave": "Always 1. Marks the JSON as a style record.",
+    "label": "The name on the tile.",
+    "base": "The built-in style this record starts from; every key left out rests on it. See examples for what each base is.",
+    "palette": "Retired 2026-10-03 and still read: a pair other than neutral is written out as its background and text on both sides.",
+    "reading": "The reading size step of the article, a fluid rung and not a pixel value; default is about 22px on a desktop. Do not set a size for a monospaced reading face, its phone floor is handled by the theme.",
+    "justify": "Justified paragraphs with hyphenation.",
+    "dropcap": "A large initial on the first paragraph; capLines is its height in lines.",
+    "capLines": "Height of the initial in lines. Only with dropcap.",
+    "radius": "The corners of cards, buttons, fields and pictures: none (square), small, medium (the theme's own), large or xlarge. One step re-cuts every corner together; corners inside corners stay sums.",
+    "rounded": "Retired 2026-10-03 and still read: false becomes radius none.",
+    "borderWidth": "How wide every line is: the lines between rows, around buttons and the line of an outlined card, quote or field. none (the theme's own: no lines but link underlines), hairline (half a pixel), or 1, 2, 3 or 5 px. It adds no line to a filled box: that is the Cards, Quotes and Fields rows' choice.",
+    "lines": "Retired 2026-10-03 and still read: false becomes borderWidth none; true takes linewidth (and hairline with hairlines).",
+    "borderStrength": "How strong the lines are: the text colour's share in the line colour, 10, 20, 45 (the theme's own), 70 or 100 per cent. Only with a borderWidth.",
+    "line": "Retired 2026-10-03 and still read: the lines' strength becomes borderStrength, the same steps.",
+    "corners": "Retired 2026-10-03 and still read: the corner size becomes radius (small, medium, large, xlarge).",
+    "marker": "Retired 2026-10-03 and still read: true becomes colours.<side>.highlight, the pen's colour; false none.",
+    "markercolour": "Retired 2026-10-03 and still read: the pen becomes the highlight's colour (text and muted become yellow).",
+    "lineLength": "How many letters a line of reading text holds: 60 to 88 in steps of 4; 72 is the theme's own (45 to 75 is the classic range for comfortable reading). The column grows with the text size. On another theme it sets the theme's content width.",
+    "measure": "Retired 2026-10-03 and still read: the line length is lineLength now, the same steps.",
+    "space": "The space of the page: xcompact, compact, standard, spacious or xspacious. Standard is the rest, the theme's own. Each kind of gap moves by its own amount: inside a group a little, between items more, between sections most, so what belongs together stays together. The reading text of an article keeps its own rhythm.",
+    "spaceInside": "Space inside a group, a style's own: a title and the line under it, the date and the text, the padding in a button. 32 is the rest; smaller gaps of the same job follow by the same steps, and a growing gap stops at spaceSections. In px of the theme's own scale; the theme's own is the rest. On another theme the gaps move by the same number of steps along the scale (2, 4, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128, 160, 192, 256). On a phone the three big jobs move half as many steps. The Space dial moves all four together, one step at a time.",
+    "spaceItems": "Space between items, a style's own: posts in a list, cards in a grid, given per side (two posts stand twice this far apart). 80 is the rest; the room above a heading moves with it. In px of the theme's own scale; the theme's own is the rest. On another theme the gaps move by the same number of steps along the scale (2, 4, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128, 160, 192, 256). On a phone the three big jobs move half as many steps. The Space dial moves all four together, one step at a time.",
+    "spaceSections": "Space between sections, a style's own: the bands a page is stacked from, the parts at the end of an article. 64 is the rest; a shrinking gap stops at spaceInside. In px of the theme's own scale; the theme's own is the rest. On another theme the gaps move by the same number of steps along the scale (2, 4, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128, 160, 192, 256). On a phone the three big jobs move half as many steps. The Space dial moves all four together, one step at a time.",
+    "spaceTitle": "Space above a page's title, a style's own: the room the title stands in. 96 is the rest. In px of the theme's own scale; the theme's own is the rest. On another theme the gaps move by the same number of steps along the scale (2, 4, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128, 160, 192, 256). On a phone the three big jobs move half as many steps. The Space dial moves all four together, one step at a time.",
+    "frameWidth": "Width of the frame around pictures in pixels: 4, 8 (the rest), 12, 16, 24 or 32. Only with a pictureFrame.",
+    "framewidth": "Retired 2026-10-03 and still read: becomes frameWidth, the same steps.",
+    "framepattern": "Retired 2026-10-03 and still read: with the frame on, becomes pictureFrame (plain, dots, checker).",
+    "titleWidth": "How wide the article's title, categories and date stand: content (the reading column, the rest) or wide (the theme's wide width, as the wide top picture). WordPress's own words. Architrave's page only.",
+    "widehead": "Retired 2026-10-03 and still read: true becomes titleWidth wide.",
+    "pictureWidth": "How wide the article's first picture stands: content (the reading column, the rest), wide (the theme's wide width) or full (edge to edge across the paper, a low 21:9 banner with square corners). WordPress's own words. Architrave's page only.",
+    "widepicture": "Retired 2026-10-03 and still read: true becomes pictureWidth wide (full with fullpicture on).",
+    "fullpicture": "Retired 2026-10-03 and still read: on, with widepicture, becomes pictureWidth full.",
+    "categories": "Where the line of categories stands on the article and on its cards: below the title (the rest), above it, or hidden. It replaced the switch kickerabove.",
+    "kickerabove": "Retired 2026-09-27 and still read: true becomes categories above.",
+    "buttonColour": "What fills the main buttons: accent (the brand colour, the rest), text, or own (colours.<side>.button). The links keep the accent either way.",
+    "button": "Retired 2026-10-03 and still read: becomes buttonColour (ink is text).",
+    "inkbutton": "Retired 2026-09-26 and still read: true becomes button ink.",
+    "buttonShape": "The buttons' corners: match (the corners every card has, the rest), square, rounded (8 px) or pill. Only with a radius.",
+    "buttonshape": "Retired 2026-10-03 and still read: becomes buttonShape (cards is match).",
+    "tagsMatchButtons": "true: the tags' pills take the buttons' corner instead of staying round.",
+    "tagsfollow": "Retired 2026-10-03 and still read: becomes tagsMatchButtons.",
+    "primaryButton": "How the main buttons look (the one action, like Subscribe): filled (the rest), outlined, shadow (outlined with a hard shadow), tinted, gray or text (text only), in the button colour.",
+    "buttonstyle": "Retired 2026-10-03 and still read: becomes primaryButton, the same looks.",
+    "secondaryButton": "How the other buttons look (a second choice beside the main one): gray (the rest), filled, tinted, outlined, shadow or text, in the button colour where it has one.",
+    "buttonmedium": "Retired 2026-10-03 and still read: becomes secondaryButton, the same looks.",
+    "tertiaryButton": "How the quiet buttons look (small actions, like Share): text (the rest), filled, tinted, gray, outlined or shadow. Architrave's alone; another theme has no quiet kind.",
+    "buttonquiet": "Retired 2026-10-03 and still read: becomes tertiaryButton, the same looks.",
+    "tags": "How the tags at the end of an article look: text (the rest: words, as the theme sets them), or small pills that are filled, tinted, gray or outlined, made from the button colour. Tags follow the buttons gives the pills the buttons' corner.",
+    "currentItem": "How the current item is marked (the page you are on in the menu, the open tab): gray (the rest: the theme's own mark), filled with the button colour, outlined in it, or bold and underlined.",
+    "chosenitem": "Retired 2026-10-03 and still read: becomes currentItem, the same looks.",
+    "linewidth": "Retired 2026-10-03 and still read: with lines, it becomes borderWidth (1, 2, 3, 5).",
+    "cards": "How cards and boxes look: the theme's cards (link cards, the support box) and a box the writer coloured in an article (a Group block with a background): filled (the rest: the card's own fill, no line, whatever the Lines slider), outlined (a line on the paper, as wide as the Lines slider says, never under 1 px; a coloured box keeps its colour) or raised (lifted by a shadow).",
+    "quotes": "How quotes look, in an article and as a quote post: sideLine (set in, with a vertical line at the side, whatever the lines setting; the rest on Architrave), indented (set in from the edge, no line; the rest on another theme), plain (the words alone, not set in) or filled (in a box with its fill and no line, whatever the Lines slider; a quote post's card). Quotes are italic.",
+    "notes": "Retired 2026-10-05 and still read: a box the writer coloured follows cards now.",
+    "fields": "How search, comment and sign-up fields look: filled (the rest: the fill, no line, whatever the Lines slider), outlined (a line on the paper, as wide as the Lines slider says) or raised (lifted by a shadow).",
+    "paragraphs": "Paragraphs spaced apart (the rest) or indented with no space between, as print sets them.",
+    "capface": "The drop cap's letter: text (the rest, the reading text's own face and weight), bold (the reading face in bold, as the title), fraunces (a soft old-style display capital) or title (the heading role's own face, weight, slant and colour). Shows with Drop cap on.",
+    "hyphenate": "Where words break at the line's end: auto (the rest: with Justified text, every word that may), few (long words only, on any edge, never on two lines in a row), any (every word that may, on any edge) or off (never).",
+    "pictureCorners": "The pictures' corners: match (the corners every card and button has, the rest) or square (pictures cut square while cards and buttons keep theirs).",
+    "piccorners": "Retired 2026-10-03 and still read: becomes pictureCorners (cards is match).",
+    "pictureShadow": "A soft shadow under the pictures, so a white screenshot stands off a white paper: none (the rest) or soft; by night a faint light edge instead. Architrave's page only.",
+    "pictureEdge": "A fine line around pictures without a frame, so a white screenshot keeps its edge on a white paper: none (the rest), faint (the ink at 8 %), medium (16 %) or strong (30 %), drawn inside the picture. Architrave's page only.",
+    "pictureshadow": "Retired 2026-10-03 and still read: becomes pictureShadow (off is none).",
+    "subcolour": "Retired 2026-10-02 and still read: ink keeps the headings in the ink under a coloured title (roles.headings.colour ink).",
+    "opening": "The article's first paragraph speaks up, as a launch page opens on one big sentence: off (the rest) or big (1.4 times the text, medium, in the ink). Architrave's page only.",
+    "figureWidth": "How wide the pictures inside the article stand: content (the reading column, the rest) or wide (as the wide top picture, centred, with more air). Architrave's page only.",
+    "widefigures": "Retired 2026-10-03 and still read: on becomes figureWidth wide.",
+    "pillbuttons": "Retired 2026-09-26 and still read: true becomes buttonshape pill.",
+    "centretitle": "Retired 2026-09-25 and still read: true becomes roles.head.align and roles.kicker.align center, with roles.head.members.sub.align default.",
+    "fadeedges": "Retired 2026-10-03 and still read: with the fade on, becomes pictureFade (bottom, sides, all).",
+    "borderStyle": "solid (the rest), dashed or dotted lines. Dashes are long only with radius none. Only with a borderWidth.",
+    "linestyle": "Retired 2026-10-03 and still read: becomes borderStyle (solid, dashed, dotted).",
+    "fills": "Retired 2026-10-03 and still read: false becomes fill none.",
+    "fill": "Retired 2026-10-05 and still read: none becomes cards and fields outlined; a strength is dropped (the fills are the colours' own, the Cards colour).",
+    "softlevel": "Retired 2026-10-03: Softer reading text's strength; the reading text takes Soft text's one shade.",
+    "quietlevel": "Retired 2026-10-03 and still read: with soft, the small text's strength becomes Soft text's own colour (colours.<side>.mutedText).",
+    "smallsoft": "Retired 2026-10-03 and still read: the small text's strength becomes Soft text's own colour (colours.<side>.mutedText), the text that far toward the background.",
+    "links": "How links in the text are marked: both (the rest: the accent and an underline), coloured (the accent alone, no underline even under the pointer), underlined (the ink with a quiet underline), bold (the ink on a thick underline in the accent, filled with the accent under the pointer) or wash (the ink on a pale wash of the accent, as a highlighter lays it, filled with the accent under the pointer). Not set, a style with soft marks them underlined, and an export leaves it out.",
+    "pictureFilter": "How every image on the site is shown: none (as published, the rest), grayscale, sepia, tinted (in the colour pair's paper and text), duotone (paper and accent), grain (film grain), warm, or hidden (no pictures).",
+    "pictures": "Retired 2026-10-03 and still read: becomes pictureFilter (plain is none, bw grayscale, duo tinted, accent duotone).",
+    "colourOnHover": "true: the picture look lifts under the pointer and the real colours show. Nothing with pictureFilter none or hidden.",
+    "picturehover": "Retired 2026-10-03 and still read: becomes colourOnHover.",
+    "alternates": "Inter's alternate letters: the one with a longer flag, round quotes, commas and apostrophes. Only while the interface face is Inter; the article keeps its own face's letters.",
+    "soft": "Retired 2026-10-03 and still read: true becomes roles.body.colour mutedText, and links underlined.",
+    "dimInDark": "true: pictures are dimmed a little on the dark side.",
+    "picturedim": "Retired 2026-10-03 and still read: becomes dimInDark.",
+    "pictureFade": "The article's top picture fades into the paper: none (the rest), bottom, sides (bottom and sides) or all four edges. Architrave's page only.",
+    "picturefade": "Retired 2026-10-03 and still read: false becomes pictureFade none; true takes fadeedges.",
+    "pictureFrame": "The frame around pictures: none (a picture stands on the paper with its corner alone), plain (a mat in the fields' colour, the rest), dots (the dot grid) or checker (a transparency checkerboard). With a borderWidth, a line around it too.",
+    "pictureframe": "Retired 2026-10-03 and still read: false becomes pictureFrame none; true takes framepattern.",
+    "darkground": "Retired 2026-10-03 and still read: true becomes the light side's background2, the night's own ground (or the dark ground's own colour).",
+    "hairlines": "Retired 2026-10-03 and still read: with lines at 1, true becomes borderWidth hairline.",
+    "tint": "Retired 2026-10-03 and still read: the accent's name becomes the accent colour on both sides.",
+    "scope": "Legacy. The theme always applies paragraph settings everywhere.",
+    "effects": "The extras' details, one object per effect (title, serif, arrival, cardlight, moving, button, pattern, guides, tint, aurora, pointer, dividers, topline, picglow), each holding only the details that differ from their rest; the effect's own switch is its flat pick (titlefinish, headitalics, headarrival, cardlight, buttonfinish, toppattern, guides, greytint, pageglow, movinglight) or, for the last four, its look.",
+    "roles": "Typography by seven roles, named for their job and tied to the HTML every site has. title: the one big line of a page (h1, the post title). headings: the headings inside the text (h2 to h6) and the site's name. body: what people read (p, li). quote: quotations. meta: small facts around the text (dates, authors, categories, tags, captions). interface: menus, buttons, fields, labels. code: code, pre, kbd. Every role takes font, size, weight, lineHeight, letterSpacing, capitals, italic; title and headings also align; meta also takes categorySize (the category line under the title, same or its own step); every role also takes a colour (text, mutedText, accent or own). A dial left out is the theme's own. size is a step from the role's own size (-4 to +6, each 1.125 apart). lineHeight: tight, snug, normal, relaxed, loose. letterSpacing: tighter, tight, normal, wide, wider, widest. Records say architrave 3 (2 before the seven colours); older records with the eight roles are read into the seven.",
+    "colours": "Seven colours per side, named for their job, as hex: background (Paper: the page the text sits on), background2 (Ground: the space around the page and the rails, a theme's second background), card (Cards: menus, boxes, fields standing on the page), text, mutedText (Soft text: dates, captions, small facts), accent (the brand colour: links and the main buttons) and highlight (the highlighter's colour; left out, none). Beside them the button's own colour and each type role's own (title, headings, body, quote, meta, interface, code), used with button own and roles.<role>.colour own. Leave out what you do not need: the rest is mixed from background and text. text on background must reach 4.5:1 and accent on background 3:1 on both sides. A background2 on the other side of its background (dark around a light page, light around a dark one) is a dark ground, worn around the page on wide screens with its own words, lines and links. Older records name paper, ink, ground, lift and marker; they are read as these. primary, foreground and muted-foreground are read as accent, text and mutedText."
+  },
+  "rules": [
+    "Send only the keys you want to change from the base; a smaller record is a better record.",
+    "The day leads: set the light colours, and the dark side works each one out from them unless you set it too. Check both sides.",
+    "Colours: seven per side, named for their job. background is the page the text sits on (people see Paper); background2 the space around it and the rails, a second background a theme may have (Ground); card what stands on the page: menus, boxes, fields (Cards); text; mutedText the quiet text of dates and captions (Soft text); accent the brand colour of links and main buttons; highlight the highlighter, left out for none. Leave out what you do not need: the rest is worked out from background and text.",
+    "Contrast: text on background at 4.5:1 or better, accent on background at 3:1 or better, on both sides.",
+    "A background2 on the other side of the background (dark around a light page, or light around a dark one) is a dark ground: it is worn around the page on wide screens, with its own words, lines and links.",
+    "A detail shows only with its setting on: borderStyle and borderStrength need a borderWidth, frameWidth a pictureFrame, capLines and capface a dropcap, colourOnHover a pictureFilter.",
+    "Pick fonts from the listed ids only; the theme ships no others.",
+    "To try a record without publishing it, open the site at /#style= followed by the base64url of the record JSON."
+  ],
+  "typography": {
+    "roles": {
+      "title": "The one big line of a page: the article's title, a page's name.",
+      "headings": "The headings inside the text, and the site's name.",
+      "body": "What people read: paragraphs, lists, excerpts, the comments' words.",
+      "quote": "Quotations and pull quotes.",
+      "meta": "Small facts around the text: dates, authors, categories, tags, captions, names in comments.",
+      "interface": "The site around the text: menus, buttons, fields, labels, section titles.",
+      "code": "Code and keys, inline and in blocks."
+    },
+    "dials": {
+      "font": "A face id from the list, or body / interface to follow the reading or the interface font. Left out: the theme's own.",
+      "size": "Steps from the role's own size, each 1.125 times the one before: -1 a little smaller, +1 a little larger, +3 about half again as large. 0 or left out: the theme's own.",
+      "weight": "thin 100 to black 900; a face offers the weights it has and falls to the nearest.",
+      "lineHeight": "tight for big titles, snug for headings, normal is the theme's own, relaxed for long reading, loose for airy small text.",
+      "letterSpacing": "tighter and tight close large type up, normal is the theme's own, wide to widest open small capitals and labels.",
+      "capitals": "true sets the role in capitals.",
+      "italic": "true sets it in italic, where the face has one.",
+      "align": "default (the start), center or right; title and headings.",
+      "categorySize": "meta only: the category line under the title, on the article and its cards. same (the rest): it follows size. Or its own step from its own 26 px, -4 to +6, each 1.125 apart; the dates keep size.",
+      "colour": "text (the text colour), mutedText (Soft text, the quiet colour of dates and captions), accent (the brand colour), or own (the role's own colour, colours.<side>.<role>). Left out: text, and for meta mutedText."
+    }
+  },
+  "examples": {
+    "standard": {
+      "architrave": 3,
+      "label": "Original",
+      "base": "standard",
+      "sans": "inter",
+      "reading": "default",
+      "face": "newsreader",
+      "leading": "default",
+      "justify": false,
+      "dropcap": false,
+      "scope": "article",
+      "roles": {}
+    }
+  },
+  "colourPresets": [
+    {
+      "id": "still",
+      "label": "Slate",
+      "light": {
+        "background": "#f2f2f4",
+        "text": "#1d1d1f",
+        "accent": "#0066cc",
+        "button": "#0071e3",
+        "background2": "#e8e8ec",
+        "card": "#ffffff",
+        "mutedText": "#66666b"
+      },
+      "dark": {
+        "background": "#2c2c2e",
+        "text": "#f5f5f7",
+        "accent": "#2997ff",
+        "button": "#2997ff",
+        "background2": "#1c1c1e",
+        "card": "#3a3a3c",
+        "mutedText": "#a1a1a6"
+      }
+    },
+    {
+      "id": "clear",
+      "label": "Titanium White",
+      "light": {
+        "background": "#ffffff",
+        "text": "#000000",
+        "accent": "#000000",
+        "background2": "#f2f2f2",
+        "card": "#f0f0f0",
+        "mutedText": "#4a4a4a"
+      },
+      "dark": {
+        "background": "#000000",
+        "text": "#ffffff",
+        "accent": "#ffffff",
+        "background2": "#000000",
+        "card": "#1a1a1a",
+        "mutedText": "#c7c7c7"
+      }
+    },
+    {
+      "id": "soft",
+      "label": "Dove Grey",
+      "light": {
+        "background": "#e9e7e3",
+        "text": "#4a4845",
+        "accent": "#4f6178",
+        "background2": "#dfddd8",
+        "card": "#e1ded9",
+        "mutedText": "#66635e"
+      },
+      "dark": {
+        "background": "#2b2b2d",
+        "text": "#a9a9ad",
+        "accent": "#8fa3bf",
+        "background2": "#222224",
+        "card": "#353537",
+        "mutedText": "#8a8a8f"
+      }
+    },
+    {
+      "id": "essay",
+      "label": "Ivory",
+      "light": {
+        "background": "#faf5e9",
+        "text": "#26231f",
+        "accent": "#8b1e1e",
+        "background2": "#faf5e9",
+        "card": "#f1eadb",
+        "mutedText": "#6b665e"
+      },
+      "dark": {
+        "background": "#1a1917",
+        "text": "#d9d4ca",
+        "accent": "#e08a7c",
+        "background2": "#1a1917",
+        "card": "#24221f",
+        "mutedText": "#9a948a"
+      }
+    },
+    {
+      "id": "folio",
+      "label": "Sepia",
+      "light": {
+        "background": "#f8f1e3",
+        "text": "#4f321c",
+        "accent": "#9a4a1e",
+        "background2": "#efe4cf",
+        "card": "#f1e6d0",
+        "mutedText": "#7a5f45"
+      },
+      "dark": {
+        "background": "#2a2118",
+        "text": "#e9dcc6",
+        "accent": "#e39a6b",
+        "background2": "#1f1912",
+        "card": "#352a1f",
+        "mutedText": "#b5a48c"
+      }
+    },
+    {
+      "id": "brick",
+      "label": "Terracotta",
+      "light": {
+        "background": "#f5e9e2",
+        "text": "#2b1d18",
+        "accent": "#a8402a"
+      },
+      "dark": {
+        "background": "#201715",
+        "text": "#eddcd4",
+        "accent": "#e08268"
+      }
+    },
+    {
+      "id": "rose",
+      "label": "Rose",
+      "light": {
+        "background": "#f8e9ec",
+        "text": "#2e1a20",
+        "accent": "#a3324f"
+      },
+      "dark": {
+        "background": "#221519",
+        "text": "#f0dde2",
+        "accent": "#e88aa3"
+      }
+    },
+    {
+      "id": "apricot",
+      "label": "Apricot",
+      "light": {
+        "background": "#fbeadb",
+        "text": "#2f1f14",
+        "accent": "#a8480f"
+      },
+      "dark": {
+        "background": "#24180f",
+        "text": "#f2e0d1",
+        "accent": "#f0a066"
+      }
+    },
+    {
+      "id": "ochre",
+      "label": "Ochre",
+      "light": {
+        "background": "#f3edd6",
+        "text": "#2b2714",
+        "accent": "#7a5b00"
+      },
+      "dark": {
+        "background": "#1f1c10",
+        "text": "#ebe5cc",
+        "accent": "#d9b44a"
+      }
+    },
+    {
+      "id": "plum",
+      "label": "Mauve",
+      "light": {
+        "background": "#f2ecf3",
+        "text": "#271e2c",
+        "accent": "#6f3a80"
+      },
+      "dark": {
+        "background": "#1b161e",
+        "text": "#e8dfea",
+        "accent": "#c496d6"
+      }
+    },
+    {
+      "id": "umber",
+      "label": "Umber",
+      "light": {
+        "background": "#ece6dd",
+        "text": "#29231c",
+        "accent": "#6e5233"
+      },
+      "dark": {
+        "background": "#1c1814",
+        "text": "#e6ded2",
+        "accent": "#c7a988"
+      }
+    },
+    {
+      "id": "cobalt",
+      "label": "Cobalt",
+      "light": {
+        "background": "#eef1f8",
+        "text": "#16203a",
+        "accent": "#2743a8"
+      },
+      "dark": {
+        "background": "#121727",
+        "text": "#e1e7f5",
+        "accent": "#8ba3f5"
+      }
+    },
+    {
+      "id": "azure",
+      "label": "Azure",
+      "light": {
+        "background": "#e8f3fa",
+        "text": "#0f2533",
+        "accent": "#0a5f99"
+      },
+      "dark": {
+        "background": "#0f1c25",
+        "text": "#dcebf5",
+        "accent": "#6bb8ea"
+      }
+    },
+    {
+      "id": "teal",
+      "label": "Teal",
+      "light": {
+        "background": "#e6f2f0",
+        "text": "#10292a",
+        "accent": "#0d6661"
+      },
+      "dark": {
+        "background": "#0e1e1d",
+        "text": "#d8ebe8",
+        "accent": "#5cc6bb"
+      }
+    },
+    {
+      "id": "moss",
+      "label": "Jade",
+      "light": {
+        "background": "#eaf0e6",
+        "text": "#1c2a1c",
+        "accent": "#2f6b36"
+      },
+      "dark": {
+        "background": "#141a14",
+        "text": "#dfe8dc",
+        "accent": "#7fc98a"
+      }
+    },
+    {
+      "id": "lichen",
+      "label": "Lichen",
+      "light": {
+        "background": "#f7f7f5",
+        "text": "#222f30",
+        "accent": "#46731a"
+      },
+      "dark": {
+        "background": "#222f30",
+        "text": "#ffffff",
+        "accent": "#cef79e"
+      }
+    },
+    {
+      "id": "lavender",
+      "label": "Lavender",
+      "light": {
+        "background": "#efedf8",
+        "text": "#1f1b33",
+        "accent": "#5541b0"
+      },
+      "dark": {
+        "background": "#17152a",
+        "text": "#e5e1f5",
+        "accent": "#a99af0"
+      }
+    },
+    {
+      "id": "vermilion",
+      "label": "Vermilion",
+      "light": {
+        "background": "#b82a16",
+        "text": "#fff6ec",
+        "accent": "#fff6ec"
+      },
+      "dark": {
+        "background": "#2a0a06",
+        "text": "#ffd9cc",
+        "accent": "#ffd9cc"
+      }
+    },
+    {
+      "id": "tangerine",
+      "label": "Tangerine",
+      "light": {
+        "background": "#ff8a1f",
+        "text": "#1f0e00",
+        "accent": "#1f0e00"
+      },
+      "dark": {
+        "background": "#2a1300",
+        "text": "#ffe3c7",
+        "accent": "#ffe3c7"
+      }
+    },
+    {
+      "id": "cadmium",
+      "label": "Cadmium Yellow",
+      "light": {
+        "background": "#ffd23f",
+        "text": "#231c00",
+        "accent": "#231c00"
+      },
+      "dark": {
+        "background": "#1f1a05",
+        "text": "#fff3c4",
+        "accent": "#fff3c4"
+      }
+    },
+    {
+      "id": "viridian",
+      "label": "Viridian",
+      "light": {
+        "background": "#0b6358",
+        "text": "#eafff9",
+        "accent": "#eafff9"
+      },
+      "dark": {
+        "background": "#062521",
+        "text": "#cff5ec",
+        "accent": "#cff5ec"
+      }
+    },
+    {
+      "id": "ultramarine",
+      "label": "Ultramarine",
+      "light": {
+        "background": "#1f33c9",
+        "text": "#f2f4ff",
+        "accent": "#f2f4ff"
+      },
+      "dark": {
+        "background": "#0a0f33",
+        "text": "#dfe4ff",
+        "accent": "#dfe4ff"
+      }
+    },
+    {
+      "id": "flamingo",
+      "label": "Flamingo",
+      "light": {
+        "background": "#ffc9da",
+        "text": "#3b0a1f",
+        "accent": "#3b0a1f"
+      },
+      "dark": {
+        "background": "#2a0b18",
+        "text": "#ffe0ea",
+        "accent": "#ffe0ea"
+      }
+    },
+    {
+      "id": "sandstone",
+      "label": "Venetian Red",
+      "light": {
+        "background": "#f8f4e9",
+        "text": "#b84b30",
+        "accent": "#b84b30"
+      },
+      "dark": {
+        "background": "#2a1712",
+        "text": "#f0a58e",
+        "accent": "#f0a58e"
+      }
+    },
+    {
+      "id": "corten",
+      "label": "Burnt Sienna",
+      "light": {
+        "background": "#3a1712",
+        "text": "#f4a585",
+        "accent": "#f4a585"
+      },
+      "dark": {
+        "background": "#24100c",
+        "text": "#eb9a7a",
+        "accent": "#eb9a7a"
+      }
+    },
+    {
+      "id": "prussian",
+      "label": "Prussian Blue",
+      "light": {
+        "background": "#f4f3ee",
+        "text": "#1d3f8f",
+        "accent": "#1d3f8f"
+      },
+      "dark": {
+        "background": "#121726",
+        "text": "#a9bdf2",
+        "accent": "#a9bdf2"
+      }
+    },
+    {
+      "id": "indigo",
+      "label": "Indigo",
+      "light": {
+        "background": "#141f45",
+        "text": "#a9bdf7",
+        "accent": "#a9bdf7"
+      },
+      "dark": {
+        "background": "#0c1430",
+        "text": "#9fb4f2",
+        "accent": "#9fb4f2"
+      }
+    },
+    {
+      "id": "sapgreen",
+      "label": "Sap Green",
+      "light": {
+        "background": "#f3f2e8",
+        "text": "#2a5e34",
+        "accent": "#2a5e34"
+      },
+      "dark": {
+        "background": "#131a14",
+        "text": "#9fd0a6",
+        "accent": "#9fd0a6"
+      }
+    },
+    {
+      "id": "forest",
+      "label": "Forest",
+      "light": {
+        "background": "#13291a",
+        "text": "#97d4a4",
+        "accent": "#97d4a4"
+      },
+      "dark": {
+        "background": "#0b1b10",
+        "text": "#8ccb99",
+        "accent": "#8ccb99"
+      }
+    }
+  ]
+}
