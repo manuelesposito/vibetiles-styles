@@ -8,14 +8,18 @@
 			"by": "Elmastudio",
 			"needs": "0.57",
 			"preset": "folio",
-			"colours": {
+			"tile": {
 				"light": {
-					"accent": "#4f321c",
-					"highlight": "#ffc46e"
+					"paper": "#f8f1e3",
+					"ink": "#4f321c",
+					"accent": "#4f321c"
 				},
 				"dark": {
-					"highlight": "#ffc46e"
-				}
+					"paper": "#2a2118",
+					"ink": "#e9dcc6",
+					"accent": "#e39a6b"
+				},
+				"face": "\"Literata\", Georgia, serif"
 			},
 			"file": "styles/book/style.json",
 			"preview": null
@@ -27,7 +31,19 @@
 			"by": "Elmastudio",
 			"needs": "0.57",
 			"preset": "clear",
-			"colours": {},
+			"tile": {
+				"light": {
+					"paper": "#ffffff",
+					"ink": "#000000",
+					"accent": "#000000"
+				},
+				"dark": {
+					"paper": "#000000",
+					"ink": "#ffffff",
+					"accent": "#ffffff"
+				},
+				"face": "\"Atkinson Hyperlegible Next\", sans-serif"
+			},
 			"file": "styles/clear/style.json",
 			"preview": null
 		},
@@ -38,7 +54,19 @@
 			"by": "Elmastudio",
 			"needs": "0.57",
 			"preset": "essay",
-			"colours": {},
+			"tile": {
+				"light": {
+					"paper": "#faf5e9",
+					"ink": "#26231f",
+					"accent": "#8b1e1e"
+				},
+				"dark": {
+					"paper": "#1a1917",
+					"ink": "#d9d4ca",
+					"accent": "#e08a7c"
+				},
+				"face": "\"Spectral\", Georgia, serif"
+			},
 			"file": "styles/essay/style.json",
 			"preview": null
 		},
@@ -49,7 +77,19 @@
 			"by": "Elmastudio",
 			"needs": "0.57",
 			"preset": "soft",
-			"colours": {},
+			"tile": {
+				"light": {
+					"paper": "#e9e7e3",
+					"ink": "#4a4845",
+					"accent": "#4f6178"
+				},
+				"dark": {
+					"paper": "#2b2b2d",
+					"ink": "#a9a9ad",
+					"accent": "#8fa3bf"
+				},
+				"face": "\"Source Serif 4\", Georgia, serif"
+			},
 			"file": "styles/soft/style.json",
 			"preview": null
 		},
@@ -60,7 +100,19 @@
 			"by": "Elmastudio",
 			"needs": "0.57",
 			"preset": "still",
-			"colours": {},
+			"tile": {
+				"light": {
+					"paper": "#f2f2f4",
+					"ink": "#1d1d1f",
+					"accent": "#0066cc"
+				},
+				"dark": {
+					"paper": "#2c2c2e",
+					"ink": "#f5f5f7",
+					"accent": "#2997ff"
+				},
+				"face": "\"Inter Variable\", Inter, ui-sans-serif, system-ui, sans-serif"
+			},
 			"file": "styles/still/style.json",
 			"preview": null
 		}
